@@ -9,3 +9,21 @@ C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\Some
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenLogic\obj\Debug\SomerenLogic.pdb
+<<<<<<< Updated upstream
+=======
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.csproj.AssemblyReference.cache
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\Joshua\Desktop\INF1C - Projectdossier (Groep 2) Floortje, Sem, Emanuel\Project Someren (Project Databases)\Assignments\Assignment 2\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\florian windows\source\repos\floriantjeertes\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.csproj.AssemblyReference.cache
+C:\Users\florian windows\source\repos\floriantjeertes\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\florian windows\source\repos\floriantjeertes\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\florian windows\source\repos\floriantjeertes\Someren-opdracht-team-2\SomerenLogic\obj\Debug\SomerenLogic.pdb
+>>>>>>> Stashed changes
