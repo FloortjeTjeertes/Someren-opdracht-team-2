@@ -52,16 +52,13 @@ namespace SomerenUI
                     List<Student> studentList = studService.GetStudents(); ;
 
                     // clear the listview before filling it again
-                    listViewStudents.Items.Clear();
+                    listViewStudents.Clear();
 
                     foreach (Student s in studentList)
                     {
-                        ListViewItem li = new ListViewItem(Convert.ToString(s.Id));
-                        li.SubItems.Add(s.FirstName);
-                        li.SubItems.Add(s.LastName);
+                        ListViewItem li = new ListViewItem(s.Name);
                         listViewStudents.Items.Add(li);
                     }
-                    listViewStudents.View = View.Details;
                 }
                 catch (Exception e)
                 {
@@ -98,16 +95,6 @@ namespace SomerenUI
         private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Students");
-        }
-
-        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listViewStudents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
