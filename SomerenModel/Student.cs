@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 namespace SomerenModel
 {
     public class Student
-    { 
-        public string Name { get; set; }
-        public int Number { get; set; } // StudentNumber, e.g. 474791
-        public DateTime BirthDate { get; set; }
+    {
+        public int Id { get; set; }
+        //public bool Female { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        //public string FullName { get => $"{FirstName} {LastName}"; }
+        //public int Age { get; set; }
+        //public bool InternationalGroup { get; set; }
+        //public int RoomNumber { get; set; }
     }
 }
