@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SomerenUI
 {
@@ -24,6 +25,21 @@ namespace SomerenUI
             showPanel("Dashboard");
         }
 
+        private ImageList GetDrinkIcons()
+        {
+            ImageList imgs = new ImageList();
+            imgs.ImageSize = new Size(40, 40);
+            string[] filePaths = Directory.GetFiles("C:/Users/sempl/OneDrive/Documenten/Project Databases/Databases-Someren-repo/img");
+            
+
+            foreach (string filePath in filePaths)
+            {
+                imgs.Images.Add(Image.FromFile(filePath));
+            }
+
+            return imgs;
+        }
+
         private void showPanel(string panelName)
         {
 
@@ -31,16 +47,18 @@ namespace SomerenUI
             {
                 // hide all other panels
                 pnlStudents.Hide();
+                pnlDrinks.Hide();
 
                 // show dashboard
                 pnlDashboard.Show();
                 imgDashboard.Show();
             }
-            else if (panelName == "Students")
+            else if (panelName == "Students") //if the students panel is clicked this code is executed
             {
                 // hide all other panels
                 pnlDashboard.Hide();
                 imgDashboard.Hide();
+                pnlDrinks.Hide();
 
                 // show students
                 pnlStudents.Show();
@@ -48,12 +66,15 @@ namespace SomerenUI
                 try
                 {
                     // fill the students listview within the students panel with a list of students
-                    StudentService studService = new StudentService(); ;
-                    List<Student> studentList = studService.GetStudents(); ;
+                    StudentService studService = new StudentService();
+                    List<Student> studentList = studService.GetStudents();
 
                     // clear the listview before filling it again
                     listViewStudents.Items.Clear();
 
+                    listViewStudents.SmallImageList = GetDrinkIcons();
+
+                    //add each Student to the ListView in the Student panel
                     foreach (Student s in studentList)
                     {
                         ListViewItem li = new ListViewItem(Convert.ToString(s.Id));
@@ -61,11 +82,43 @@ namespace SomerenUI
                         li.SubItems.Add(s.LastName);
                         listViewStudents.Items.Add(li);
                     }
+                    //view the student ListView in Details format
                     listViewStudents.View = View.Details;
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the students: " + e.Message);
+                }
+            }
+            else if(panelName == "Drinks")
+            {
+                pnlDashboard.Hide();
+                imgDashboard.Hide();
+                pnlStudents.Hide();
+
+                pnlDrinks.Show();
+
+                try
+                {
+                    // fill the students listview within the students panel with a list of students
+                    DrinkService drinkService = new DrinkService();
+                    List<Drink> drinksList = drinkService.GetDrinks();
+
+                    // clear the listview before filling it again
+                    listViewDrinks.Items.Clear();
+
+                    foreach (Drink d in drinksList)
+                    {
+                        ListViewItem li = new ListViewItem(d.Name);
+                        li.SubItems.Add(Convert.ToString(d.SalesPrice));
+                        li.SubItems.Add(Convert.ToString(d.Stock));
+                        listViewDrinks.Items.Add(li);
+                    }
+                    listViewDrinks.View = View.Details;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
                 }
             }
         }
@@ -97,6 +150,7 @@ namespace SomerenUI
 
         private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if the students toolstrip menu item is clicked use the showPanel() method to show the Students panel
             showPanel("Students");
         }
 
@@ -106,6 +160,16 @@ namespace SomerenUI
         }
 
         private void listViewStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drinksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Drinks");
+        }
+
+        private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

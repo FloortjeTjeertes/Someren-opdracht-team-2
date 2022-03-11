@@ -14,4 +14,3 @@ C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\Some
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenUI\obj\Debug\SomerenUI.csproj.CoreCompileInputs.cache
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenUI\obj\Debug\SomerenUI.exe
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenUI\obj\Debug\SomerenUI.pdb
-C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete

@@ -14,6 +14,7 @@ namespace SomerenDAL
     {      
         public List<Student> GetAllStudents()
         {
+            //query to get the data from SQL
             string query = "SELECT studentID, studentFirstName, studentLastName FROM Students";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -23,6 +24,7 @@ namespace SomerenDAL
         {
             List<Student> students = new List<Student>();
 
+            //foreach row from the SQL server make a new Student out of that and put it in the Students list
             foreach (DataRow dr in dataTable.Rows)
             {
                 Student student = new Student()
