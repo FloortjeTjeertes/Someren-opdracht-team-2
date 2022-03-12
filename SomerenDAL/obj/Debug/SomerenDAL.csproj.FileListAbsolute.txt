@@ -6,3 +6,4 @@ C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\Some
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenDAL\obj\Debug\SomerenDAL.csproj.CoreCompileInputs.cache
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenDAL\obj\Debug\SomerenDAL.dll
 C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenDAL\obj\Debug\SomerenDAL.pdb
+C:\Users\sempl\OneDrive\Documenten\Project Databases\Databases-Someren-repo\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete

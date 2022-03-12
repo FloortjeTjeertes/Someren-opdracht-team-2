@@ -28,10 +28,9 @@ namespace SomerenUI
         private ImageList GetDrinkIcons()
         {
             ImageList imgs = new ImageList();
-            imgs.ImageSize = new Size(40, 40);
-            string[] filePaths = Directory.GetFiles("C:/Users/sempl/OneDrive/Documenten/Project Databases/Databases-Someren-repo/img");
+            imgs.ImageSize = new Size(90, 40);
+            string[] filePaths = Directory.GetFiles("C:\\Users\\sempl\\OneDrive\\Documenten\\Project Databases\\Databases-Someren-repo\\img");
             
-
             foreach (string filePath in filePaths)
             {
                 imgs.Images.Add(Image.FromFile(filePath));
@@ -42,7 +41,6 @@ namespace SomerenUI
 
         private void showPanel(string panelName)
         {
-
             if (panelName == "Dashboard")
             {
                 // hide all other panels
@@ -72,14 +70,13 @@ namespace SomerenUI
                     // clear the listview before filling it again
                     listViewStudents.Items.Clear();
 
-                    listViewStudents.SmallImageList = GetDrinkIcons();
-
                     //add each Student to the ListView in the Student panel
                     foreach (Student s in studentList)
                     {
                         ListViewItem li = new ListViewItem(Convert.ToString(s.Id));
                         li.SubItems.Add(s.FirstName);
                         li.SubItems.Add(s.LastName);
+                        li.Tag = s;
                         listViewStudents.Items.Add(li);
                     }
                     //view the student ListView in Details format
@@ -106,12 +103,23 @@ namespace SomerenUI
 
                     // clear the listview before filling it again
                     listViewDrinks.Items.Clear();
+                    listViewDrinks.SmallImageList = GetDrinkIcons();
 
                     foreach (Drink d in drinksList)
                     {
-                        ListViewItem li = new ListViewItem(d.Name);
+                        ListViewItem li = new ListViewItem();
+                        li.SubItems.Add(d.Name);
                         li.SubItems.Add(Convert.ToString(d.SalesPrice));
                         li.SubItems.Add(Convert.ToString(d.Stock));
+                        if (d.Stock < 10)
+                        {
+                            li.ImageIndex = 0;
+                        }
+                        else
+                        {
+                            li.ImageIndex = 1;
+                        }
+                        li.Tag = d;
                         listViewDrinks.Items.Add(li);
                     }
                     listViewDrinks.View = View.Details;
@@ -172,6 +180,16 @@ namespace SomerenUI
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddUpdate_Click(object sender, EventArgs e)
+        {
+            if (listViewDrinks.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("test");
+                return;
+            }
+            MessageBox.Show(listViewDrinks.SelectedItems[0].Tag.ToString());
         }
     }
 }

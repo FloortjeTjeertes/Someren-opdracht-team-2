@@ -57,6 +57,7 @@
             this.drinksSalesPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drinksStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drinksIcon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAddUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgDashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -247,11 +248,12 @@
             // 
             // pnlDrinks
             // 
+            this.pnlDrinks.Controls.Add(this.btnAddUpdate);
             this.pnlDrinks.Controls.Add(this.listViewDrinks);
             this.pnlDrinks.Controls.Add(this.pictureBox2);
             this.pnlDrinks.Controls.Add(this.label1);
             this.pnlDrinks.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.pnlDrinks.Location = new System.Drawing.Point(16, 30);
+            this.pnlDrinks.Location = new System.Drawing.Point(16, 29);
             this.pnlDrinks.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDrinks.Name = "pnlDrinks";
             this.pnlDrinks.Size = new System.Drawing.Size(1251, 574);
@@ -261,16 +263,17 @@
             // 
             this.listViewDrinks.BackColor = System.Drawing.SystemColors.HighlightText;
             this.listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.drinksIcon,
             this.drinksName,
             this.drinksSalesPrice,
-            this.drinksStock,
-            this.drinksIcon});
+            this.drinksStock});
             this.listViewDrinks.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listViewDrinks.FullRowSelect = true;
             this.listViewDrinks.GridLines = true;
             this.listViewDrinks.HideSelection = false;
             this.listViewDrinks.Location = new System.Drawing.Point(21, 52);
             this.listViewDrinks.Margin = new System.Windows.Forms.Padding(4);
+            this.listViewDrinks.MultiSelect = false;
             this.listViewDrinks.Name = "listViewDrinks";
             this.listViewDrinks.Size = new System.Drawing.Size(1020, 377);
             this.listViewDrinks.TabIndex = 5;
@@ -317,7 +320,17 @@
             // drinksIcon
             // 
             this.drinksIcon.Text = "Icon";
-            this.drinksIcon.Width = 260;
+            this.drinksIcon.Width = 100;
+            // 
+            // btnAddUpdate
+            // 
+            this.btnAddUpdate.Location = new System.Drawing.Point(21, 456);
+            this.btnAddUpdate.Name = "btnAddUpdate";
+            this.btnAddUpdate.Size = new System.Drawing.Size(104, 30);
+            this.btnAddUpdate.TabIndex = 6;
+            this.btnAddUpdate.Text = "Add/Update";
+            this.btnAddUpdate.UseVisualStyleBackColor = true;
+            this.btnAddUpdate.Click += new System.EventHandler(this.btnAddUpdate_Click);
             // 
             // SomerenUI
             // 
@@ -381,6 +394,7 @@
         private System.Windows.Forms.ColumnHeader drinksSalesPrice;
         private System.Windows.Forms.ColumnHeader drinksStock;
         private System.Windows.Forms.ColumnHeader drinksIcon;
+        private System.Windows.Forms.Button btnAddUpdate;
     }
 }
 

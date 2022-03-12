@@ -14,9 +14,25 @@ namespace SomerenDAL
     {
         public List<Drink> GetAllDrinks()
         {
-            string query = "SELECT name, stock, salesPrice FROM Drinks WHERE stock>1 AND salesPrice>1 AND name!='Water' AND name!='Orangeade' AND name!='Cherry juice' ORDER BY stock, salesPrice, nrOfSales;";
+            string query = "SELECT Id, name, stock, salesPrice, alcoholic, nrOfSales FROM Drinks WHERE stock>1 AND salesPrice>1 AND name!='Water' AND name!='Orangeade' AND name!='Cherry juice' ORDER BY stock, salesPrice, nrOfSales;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public void Add(Drink drink)
+        {
+            string query = "INSERT INTO Drinks (name, stock, salesPrice) VALUES (@name, @stock, @salesPrice);";
+            SqlParameter[] sqlParameters = new SqlParameter[3]
+            {
+                new SqlParameter("@name", drink.Name),
+                new SqlParameter("@stock", drink.Stock),
+                new SqlParameter("@salesPrice", drink.SalesPrice)
+            };
+        }
+
+        public void Update(Drink oldDrink, Drink newDrink)
+        {
+
         }
 
         private List<Drink> ReadTables(DataTable dataTable)
@@ -27,11 +43,12 @@ namespace SomerenDAL
             {
                 Drink drink = new Drink()
                 {
+                    Id = (int)dr["Id"],
                     Name = (string)dr["name"],
                     SalesPrice = (decimal)dr["salesPrice"],
-                    Stock = (int)dr["stock"]
-                    //Alcoholic = Convert.ToBoolean(dr["alcoholic"]),
-                    //NrOfSales = (int)dr["nrOfSales"]
+                    Stock = (int)dr["stock"],
+                    Alcoholic = Convert.ToBoolean(dr["alcoholic"]),
+                    NrOfSales = (int)dr["nrOfSales"]
                 };
                 drinks.Add(drink);
             }
