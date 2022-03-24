@@ -24,7 +24,9 @@ namespace SomerenModel
         //tostring to retrieve the name of the drink
         public override string ToString()
         {
-            return Name.ToString();
-        }
+
+            return $"{Id} {Name} {SalesPrice} {Stock}";
+        } 
+
     }
 }

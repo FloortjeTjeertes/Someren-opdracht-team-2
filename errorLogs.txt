@@ -15,3 +15,9 @@ The statement has been terminated.
 [16/03/2022 22:38:19] : Conversion failed when converting the varchar value '@student' to data type int.
 [16/03/2022 22:38:38] : Conversion failed when converting the varchar value '@student' to data type int.
 [16/03/2022 22:40:25] : Conversion failed when converting the varchar value '@student' to data type int.
+[19/03/2022 17:35:58] : Incorrect syntax near 'stock'.
+[19/03/2022 17:36:19] : Incorrect syntax near 'stock'.
+[20-3-2022 17:01:41] : Er is een netwerkfout of een exemplaarspecifieke fout opgetreden tijdens het maken van verbinding met SQL Server. De server is niet gevonden of is niet toegankelijk. Controleer of de exemplaarnaam correct is en of in de instellingen van SQL Server externe verbindingen zijn toegestaan. (provider: Named Pipes Provider, error: 40 - Kon geen verbinding met SQL Server openen)
+
+[24-3-2022 10:23:38] : The DELETE statement conflicted with the REFERENCE constraint "FK__Orders__ForeignD__6754599E". The conflict occurred in database "2122_INF1c_db2", table "dbo.Orders", column 'ForeignDrink'.
+The statement has been terminated.
