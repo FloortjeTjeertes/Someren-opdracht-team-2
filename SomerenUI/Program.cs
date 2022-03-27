@@ -16,7 +16,8 @@ namespace SomerenUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SomerenUI());
+            //Application.Run(new SomerenUI());
+            Application.Run(new LoginUI());
         }
     }
 }

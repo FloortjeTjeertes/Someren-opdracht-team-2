@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using ErrorHandlers;
 
 namespace SomerenDAL
 {
@@ -54,7 +55,7 @@ namespace SomerenDAL
         }
 
         /* For Insert/Update/Delete Queries */
-        protected void ExecuteEditQuery(string query, SqlParameter[] sqlParameters)
+        protected bool ExecuteEditQuery(string query, SqlParameter[] sqlParameters)
         {
             SqlCommand command = new SqlCommand();
 
@@ -65,6 +66,7 @@ namespace SomerenDAL
                 command.Parameters.AddRange(sqlParameters);
                 adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
+                return true;
             }
             catch (SqlException e)
             {
@@ -74,6 +76,7 @@ namespace SomerenDAL
             {
                 CloseConnection();
             }
+            return false;
         }
 
         /* For Select Queries */

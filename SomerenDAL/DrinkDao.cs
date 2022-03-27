@@ -20,8 +20,6 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-       
-
         //query to add a drink to the Drinks database table
         public void Add(Drink drink)
         {
@@ -37,7 +35,7 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        //query to update a selected drink (oldDrink) to an inserted drink
+        //query to update a selected drink (oldDrink) to an inserted drink (newDrink)
         public void Update(Drink oldDrink, Drink newDrink)
         {
             string query = "UPDATE Drinks SET name=@newName, stock=@newStock, salesPrice=@newSalesPrice, alcoholic=@newAlcoholic, nrOfSales=@newNrOfSales WHERE Id=@oldId;";
@@ -53,7 +51,7 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        //query to delete a selected query
+        //query to delete a selected drink
         public void Delete(Drink drink)
         {
             string query = "DELETE FROM Drinks WHERE Id=@Id";

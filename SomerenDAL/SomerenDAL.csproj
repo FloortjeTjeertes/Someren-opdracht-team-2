@@ -45,15 +45,17 @@
     <Compile Include="ActivityDao.cs" />
     <Compile Include="BaseDao.cs" />
     <Compile Include="DrinkDao.cs" />
-    <Compile Include="ErrorLogger.cs" />
-    <Compile Include="OrderDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RevenueDao.cs" />
     <Compile Include="RoomDao.cs" />
     <Compile Include="TeacherDao.cs" />
     <Compile Include="StudentDao.cs" />
+    <Compile Include="UserDao.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ErrorHandlers\ErrorHandlers.csproj">
+      <Project>{755f123d-bf83-4bef-8321-578dcc5e39cc}</Project>
+      <Name>ErrorHandlers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SomerenModel\SomerenModel.csproj">
       <Project>{90a9ed02-35d3-4d84-80e4-458bc835c722}</Project>
       <Name>SomerenModel</Name>
